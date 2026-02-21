@@ -1,3 +1,5 @@
+maraskinPrint("iniciado base.")
+
 import fs from "fs";
 import path from "path";
 
@@ -8,7 +10,12 @@ export interface MaraskinConfig {
   semanaPath: string;
 }
 
-export function maraskinPrint(str: string, path: string = "src/server/base.ts"): void {
+export interface Login {
+  nome: string;
+  senha: string;
+}
+
+function maraskinPrint(str: string, path: string = "src/server/base.ts"): void {
   console.log(`>> [${path}] ${str}`);
 }
 export function lerSemanaDoFileSystem(path: string = "src/files/semana.json"): string {
