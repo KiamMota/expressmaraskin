@@ -1,5 +1,6 @@
 {
   "port": 7192,
   "baseUrl": "/maraskin",
-  "filesPath": "src/files"
+  "loginPath": "src/files/login.json",
+  "semanaPath": "src/files/semana.json"
 }

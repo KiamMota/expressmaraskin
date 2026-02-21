@@ -4,5 +4,3 @@ export interface Refeicao {
   acomp: string | "N/D";
   acompCalorias: number | 0;
 }
-
-
