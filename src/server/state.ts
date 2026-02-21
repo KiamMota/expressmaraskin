@@ -1,6 +1,6 @@
 
 import express from "express"
-import { lerLoginDoFileSystem, lerSemanaDoFileSystem, loadConfig, type MaraskinConfig } from "./base.js";
+import { lerLoginDoFileSystem, lerSemanaDoFileSystem, loadConfig, type MaraskinConfig } from "./base.ts";
 import type { Login } from "../models/login.ts";
 
 export const configCached: MaraskinConfig = loadConfig();
