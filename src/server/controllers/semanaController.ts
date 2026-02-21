@@ -1,8 +1,10 @@
+import jwt from "jsonwebtoken";
 import fs from "fs";
+import type express from "express";
 import type { Semana, Dia } from "./models/semana.ts";
 import type { ResultDto } from "./models/resultDto.ts";
-import express from "express";
-import { configCached } from "../state.ts";
+
+const JWT_SECRET = process.env.JWT_SECRET || "dev_secret";
 
 export class SemanaController {
   private semana: Semana;
@@ -26,7 +28,7 @@ export class SemanaController {
     app.get(`${baseUrl}/quinta`, this.getDia.bind(this, "quinta"));
     app.get(`${baseUrl}/sexta`, this.getDia.bind(this, "sexta"));
 
-    // PUTs
+    // PUTs protegidos
     app.put(`${baseUrl}/segunda`, this.putDia.bind(this, "segunda"));
     app.put(`${baseUrl}/terca`, this.putDia.bind(this, "terca"));
     app.put(`${baseUrl}/quarta`, this.putDia.bind(this, "quarta"));
@@ -53,12 +55,26 @@ export class SemanaController {
 
   private putDia(diaNome: keyof Semana, req: express.Request, res: express.Response) {
     try {
-      // 1. Atualiza o cache
+      // 1. Checa token
+      const authHeader = req.headers.authorization;
+      if (!authHeader) {
+        return res.status(401).json(this.makeResult({}, "Token ausente", false));
+      }
+
+      const token = authHeader.split(" ")[1];
+      try {
+        jwt.verify(token, JWT_SECRET);
+      } catch {
+        return res.status(403).json(this.makeResult({}, "Token inválido", false));
+      }
+
+      // 2. Atualiza o cache
       this.semana[diaNome] = req.body;
 
-      // 2. Salva no arquivo
-      fs.writeFileSync(configCached.semanaPath, JSON.stringify(this.semana, null, 2), "utf-8");
+      // 3. Salva no arquivo
+      fs.writeFileSync(this.filePath, JSON.stringify(this.semana, null, 2), "utf-8");
 
+      // 4. Retorna resultado
       res.json(this.makeResult({ [diaNome]: this.semana[diaNome] }, `${diaNome} atualizada com sucesso`));
     } catch (err) {
       res.status(500).json(this.makeResult({}, (err as Error).message, false));
