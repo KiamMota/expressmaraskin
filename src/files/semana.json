@@ -1,0 +1,172 @@
+{
+  "segunda": {
+    "diaNome": "Segunda-feira",
+    "almoco": {
+      "nome": "feijão de rosca",
+      "calorias": 300
+    },
+    "manha": {
+      "nome": "café da manhã",
+      "merenda": {
+        "name": "pão",
+        "calorias": 100,
+        "acomp": "manteiga",
+        "acompCalorias": 50
+      }
+    },
+    "tarde": {
+      "nome": "lanche da tarde",
+      "merenda": {
+        "name": "bolo",
+        "calorias": 200,
+        "acomp": "suco",
+        "acompCalorias": 80
+      }
+    },
+    "noite": {
+      "nome": "jantar",
+      "merenda": {
+        "name": "arroz",
+        "calorias": 250,
+        "acomp": "frango",
+        "acompCalorias": 150
+      }
+    }
+  },
+  "terca": {
+    "diaNome": "Terça-feira",
+    "almoco": {
+      "nome": "arroz e feijão",
+      "calorias": 350
+    },
+    "manha": {
+      "nome": "café da manhã",
+      "merenda": {
+        "name": "pão",
+        "calorias": 100,
+        "acomp": "geleia",
+        "acompCalorias": 40
+      }
+    },
+    "tarde": {
+      "nome": "lanche da tarde",
+      "merenda": {
+        "name": "bolo",
+        "calorias": 200,
+        "acomp": "leite",
+        "acompCalorias": 60
+      }
+    },
+    "noite": {
+      "nome": "jantar",
+      "merenda": {
+        "name": "massa",
+        "calorias": 300,
+        "acomp": "molho",
+        "acompCalorias": 50
+      }
+    }
+  },
+  "quarta": {
+    "diaNome": "Quarta-feira",
+    "almoco": {
+      "nome": "frango com arroz",
+      "calorias": 400
+    },
+    "manha": {
+      "nome": "café da manhã",
+      "merenda": {
+        "name": "pão",
+        "calorias": 100,
+        "acomp": "manteiga",
+        "acompCalorias": 50
+      }
+    },
+    "tarde": {
+      "nome": "lanche da tarde",
+      "merenda": {
+        "name": "bolo",
+        "calorias": 200,
+        "acomp": "suco",
+        "acompCalorias": 80
+      }
+    },
+    "noite": {
+      "nome": "jantar",
+      "merenda": {
+        "name": "arroz",
+        "calorias": 250,
+        "acomp": "frango",
+        "acompCalorias": 150
+      }
+    }
+  },
+  "quinta": {
+    "diaNome": "Quinta-feira",
+    "almoco": {
+      "nome": "peixe com batata",
+      "calorias": 350
+    },
+    "manha": {
+      "nome": "café da manhã",
+      "merenda": {
+        "name": "pão",
+        "calorias": 100,
+        "acomp": "geleia",
+        "acompCalorias": 40
+      }
+    },
+    "tarde": {
+      "nome": "lanche da tarde",
+      "merenda": {
+        "name": "bolo",
+        "calorias": 200,
+        "acomp": "leite",
+        "acompCalorias": 60
+      }
+    },
+    "noite": {
+      "nome": "jantar",
+      "merenda": {
+        "name": "massa",
+        "calorias": 300,
+        "acomp": "molho",
+        "acompCalorias": 50
+      }
+    }
+  },
+  "sexta": {
+    "diaNome": "Sexta-feira",
+    "almoco": {
+      "nome": "carne com arroz",
+      "calorias": 400
+    },
+    "manha": {
+      "nome": "café da manhã",
+      "merenda": {
+        "name": "pão",
+        "calorias": 100,
+        "acomp": "manteiga",
+        "acompCalorias": 50
+      }
+    },
+    "tarde": {
+      "nome": "lanche da tarde",
+      "merenda": {
+        "name": "bolo",
+        "calorias": 200,
+        "acomp": "suco",
+        "acompCalorias": 80
+      }
+    },
+    "noite": {
+      "nome": "jantar",
+      "merenda": {
+        "name": "arroz",
+        "calorias": 250,
+        "acomp": "carne",
+        "acompCalorias": 150
+      }
+    }
+  }
+}

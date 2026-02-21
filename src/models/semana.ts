@@ -7,3 +7,4 @@ export interface Semana {
   quinta: Dia;
   sexta: Dia;
 }
+

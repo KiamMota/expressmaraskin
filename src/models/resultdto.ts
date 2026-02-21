@@ -3,3 +3,4 @@ export interface ResultDto {
   message: string;
   sucess: boolean;
 }
+
