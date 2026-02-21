@@ -1,16 +1,15 @@
 import jwt from "jsonwebtoken";
-import app from "./app.ts"
+import { loginCached } from "./state.ts";
+import { Token } from "../models/login.js";
 
+const JWT_SECRET = process.env.JWT_SECRET || "dev_secret";
 
-const JWT_SECRET = "super_secret_da_escola";
+export function autenticar(nome: string, senha: string): string {
+  if (!nome || !senha) {
+    throw new Error("Nome e senha obrigatórios");
+  }
 
-app.post("/login", (req, res) => {
-  const { nome, senha } = req.body;
-
-  const login = loginCached; // já carregado do JSON
-
-  if (nome !== login.nome || senha !== login.senha) {
-    return res.status(401).json({ error: "Credenciais inválidas" });
+  if (nome !== loginCached.nome || senha !== loginCached.senha) {
   }
 
   const token = jwt.sign(
@@ -19,5 +18,5 @@ app.post("/login", (req, res) => {
     { expiresIn: "8h" }
   );
 
-  res.json({ token });
-});
+  return token;
+}
