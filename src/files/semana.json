@@ -1,36 +1,28 @@
 {
   "segunda": {
-    "diaNome": "Segunda-feira",
+    "diaNome": "segunda",
     "almoco": {
       "nome": "feijão de rosca",
       "calorias": 300
     },
     "manha": {
-      "nome": "café da manhã",
-      "merenda": {
-        "name": "pão",
-        "calorias": 100,
-        "acomp": "manteiga",
-        "acompCalorias": 50
-      }
+      "nome": "pão com manteiga",
+      "merenda": [
+        {
+          "name": "pão",
+          "calorias": 200,
+          "acomp": "N/D",
+          "acompCalorias": 0
+        }
+      ]
     },
     "tarde": {
-      "nome": "lanche da tarde",
-      "merenda": {
-        "name": "bolo",
-        "calorias": 200,
-        "acomp": "suco",
-        "acompCalorias": 80
-      }
+      "nome": "lanche",
+      "merenda": []
     },
     "noite": {
-      "nome": "jantar",
-      "merenda": {
-        "name": "arroz",
-        "calorias": 250,
-        "acomp": "frango",
-        "acompCalorias": 150
-      }
+      "nome": "ceia",
+      "merenda": []
     }
   },
   "terca": {
