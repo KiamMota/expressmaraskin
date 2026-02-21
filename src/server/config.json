@@ -1,0 +1,5 @@
+{
+  "port": 7192,
+  "baseUrl": "/maraskin",
+  "filesPath": "src/files"
+}

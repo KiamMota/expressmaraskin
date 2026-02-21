@@ -1,5 +1,4 @@
-import type { Almoco } from "./almoco";
-import type { Dia } from "./dia";
+import type { Dia } from "./dia.js";
 
 export interface Semana {
   segunda: Dia;

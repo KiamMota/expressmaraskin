@@ -1,7 +1,7 @@
 const express = require("express");
-const fs = require("fs");
 import type e = require("express");
-import type semana = require("./models/semana.js");
+import type { Semana } from "../models/semana.js";
+const fs = require('fs');
 const app = express();
 const PORT: number = 7192;
 const FILE: string = "src/cardapio.json";
@@ -9,7 +9,7 @@ const FILE: string = "src/cardapio.json";
 app.use(express.json());
 
 app.post("/maraskin", (req: any, res: any) => {
-  const semana: semana.Semana = req.body; // assume que o body segue a interface Semana
+  const semana: Semana = req.body; // assume que o body segue a interface Semana
 
   try {
     fs.writeFileSync(FILE, JSON.stringify(semana, null, 2), "utf-8");

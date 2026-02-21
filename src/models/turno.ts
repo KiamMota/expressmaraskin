@@ -1,5 +1,4 @@
-import type almoco = require("./almoco.js");
-import type { Refeicao } from "./refeicao.ts";
+import type { Refeicao } from "./refeicao.js";
 
 export interface Turno {
   nome: string;
