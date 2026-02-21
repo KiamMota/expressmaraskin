@@ -1,4 +1,3 @@
-maraskinPrint("iniciado base.")
 
 import fs from "fs";
 import path from "path";
@@ -72,7 +71,7 @@ export function loadConfig(
   if (!fs.existsSync(config.semanaPath)) {
     throw new Error(`Arquivo semana não encontrado: ${config.semanaPath}`);
   }
-  maraskinPrint("configuração do servidor lida e carreagada.")
+  maraskinPrint("configuração do servidor lida e carregada.")
 
   return config;
 }

@@ -1,11 +1,10 @@
 import express from "express";
 import fs from "fs";
-import { lerLoginDoFileSystem, loadConfig, maraskinPrint, type MaraskinConfig } from "./base.ts";
+import { lerLoginDoFileSystem, loadConfig, type MaraskinConfig } from "./base.ts";
 import type { Semana } from "../models/semana.ts";
 
 const configCached: MaraskinConfig = loadConfig();
 const loginCached: string = lerLoginDoFileSystem(configCached.loginPath)
-console.log("CONFIG: ", configCached)
 const app = express();
 app.use(express.json());
 
