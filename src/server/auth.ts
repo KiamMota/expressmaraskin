@@ -1,7 +1,6 @@
 import jwt from "jsonwebtoken";
-import { loginCached } from "./state.ts";
+import { JWT_SECRET, loginCached } from "./state.ts";
 
-const JWT_SECRET = process.env.JWT_SECRET || "dev_secret";
 
 export function autenticar(nome: string, senha: string): string {
   if (!nome || !senha) {

@@ -3,8 +3,8 @@ import fs from "fs";
 import type express from "express";
 import type { Semana, Dia } from "./models/semana.ts";
 import type { ResultDto } from "./models/resultDto.ts";
+import { JWT_SECRET } from "../state.ts";
 
-const JWT_SECRET = process.env.JWT_SECRET || "dev_secret";
 
 export class SemanaController {
   private semana: Semana;

@@ -7,6 +7,7 @@ export const configCached: MaraskinConfig = loadConfig();
 export const loginCached: Login = lerLoginDoFileSystem(configCached.loginPath)
 export const semanaCached: Semana = lerSemanaDoFileSystem(configCached.semanaPath)
 
+export const JWT_SECRET = process.env.JWT_SECRET || "dev_secret";
 const app = express();
 app.use(express.json());
 
